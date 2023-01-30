@@ -100,7 +100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 555
+  m_text: ^^^
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -185,9 +185,9 @@ GameObject:
   - component: {fileID: 7363940214567202673}
   - component: {fileID: 7363940214567202687}
   - component: {fileID: 7363940214567202686}
-  - component: {fileID: 4698594931956654732}
+  - component: {fileID: 1072968445089330277}
   m_Layer: 0
-  m_Name: Let
+  m_Name: Let Boster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,7 +251,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5566038, g: 0.23891956, b: 0.23891956, a: 1}
+  m_Color: {r: 0, g: 0.65902686, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0411d5c3aa026bb4bab1e9b76a85cf86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
+  _damage: 0
 --- !u!114 &7363940214567202687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227cdf39c27104e4d8d8afef85fb5cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
 --- !u!61 &7363940214567202686
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -313,7 +312,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4698594931956654732
+--- !u!114 &1072968445089330277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,7 +321,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7363940214567202682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aea8985fc45fe247b26564d9b262442, type: 3}
+  m_Script: {fileID: 11500000, guid: f3113556eab520c418f7f7a54112b784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textDamage: {fileID: 2689150098076073420}
+  _letMoveHeandler: {fileID: 5432047906391022053, guid: 4b3dfc4633b55b045832e580d844f13f, type: 3}
+  _addSpeed: 1

@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.U2D;
 using UnityEngine;
 
 public class LetMoveHeandler : MonoBehaviour
@@ -11,7 +13,6 @@ public class LetMoveHeandler : MonoBehaviour
     [SerializeField] private float _minSpeed;
     [SerializeField] private float _addSpeedAfterTime;
     [SerializeField] private float _timeBettwenChangeSpeed;
-
 
     private float _timer = 0;
 
@@ -28,8 +29,13 @@ public class LetMoveHeandler : MonoBehaviour
 
         if (_timer >= _timeBettwenChangeSpeed)
         {
-            _letMover.AddSpeed(_addSpeedAfterTime);
+            AddLetsSpeed(_addSpeedAfterTime);
             _timer = 0;
         }
+    }
+
+    public void AddLetsSpeed(float speed)
+    {
+        _letMover.AddSpeed(speed);
     }
 }

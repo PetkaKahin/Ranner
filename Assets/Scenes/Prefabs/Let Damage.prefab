@@ -274,6 +274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
+  _bonus: 1
+  _score: {fileID: 1336144776, guid: 4b3dfc4633b55b045832e580d844f13f, type: 3}
 --- !u!114 &7363940214567202687
 MonoBehaviour:
   m_ObjectHideFlags: 0

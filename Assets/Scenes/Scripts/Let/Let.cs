@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.Port;
 
 public class Let : MonoBehaviour
 {
     [SerializeField] private int _damage = 1;
+    [SerializeField] private int _bonus;
+    [SerializeField] private Score _score;
 
     public int Damage 
     {
@@ -16,8 +14,11 @@ public class Let : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Player player))
+        {
             player.ApplayDamage(_damage);
-        
+            _score.AddScore(_bonus);
+        }
+
         Die();
     }
 

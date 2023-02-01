@@ -1,10 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] int _health = 10;
+    [SerializeField] private int _health = 10;
+
+    public static event UnityAction<int> HealthUpdate;
+    public static event UnityAction Died;
+
+    private void Start()
+    {
+        HealthUpdate?.Invoke(_health);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,9 +23,14 @@ public class Player : MonoBehaviour
     public void ApplayDamage(int damage)
     {
         if (_health <= damage)
+        {
             Die();
-            
-        _health -= damage;
+        }
+        else
+        {
+            _health -= damage;
+            HealthUpdate?.Invoke(_health);
+        }
     }
 
     private void Die()

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,15 +13,9 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _maxDelaySecondSpawned = 1f;
     [SerializeField] [Range(0.01f, 1f)] private float _spawnMaxSpeedDependency = 1f;
 
-    [SerializeField] private LetMover _letMevor;
-
-    private float _SecondBetweenSpawned;
-    private float _timer = 0;
-
     private void Start()
     {
-        _SecondBetweenSpawned = _maxDelaySecondSpawned;
-        _startDitanceSecond = _letMevor.Speed * _maxDelaySecondSpawned;
+        _startDitanceSecond = LetMover.Speed * _maxDelaySecondSpawned;
 
         for (int i = 0; i < _pools.Count; i++)
         {
@@ -28,20 +23,19 @@ public class Spawner : MonoBehaviour
         }
 
         CalculateChangeSpawn();
+
+        StartCoroutine(Spawn());
     }
 
-    private void Update()
+    private IEnumerator Spawn()
     {
-        _timer += Time.deltaTime;
-
-        if (_timer >= _SecondBetweenSpawned)
+        while (true)
         {
-            _timer = 0;
-            _SecondBetweenSpawned = Random.Range(_minDelaySecondSpawned, _maxDelaySecondSpawned);
-            _SecondBetweenSpawned = _maxDelaySecondSpawned;
-            _maxDelaySecondSpawned = CalculateMaxDelaySecond(_letMevor.Speed);
+            _maxDelaySecondSpawned = CalculateMaxDelaySecond(LetMover.Speed);
 
             ActivateObject(RandomObjectSelectin(), _spawnPoints[Random.Range(0, _spawnPoints.Count)].position);
+
+            yield return new WaitForSeconds(Random.Range(_minDelaySecondSpawned, _maxDelaySecondSpawned));
         }
     }
 

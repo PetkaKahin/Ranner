@@ -11,6 +11,8 @@ public class Score : MonoBehaviour
 
     public static event UnityAction<int> ChangeScore;
 
+    public static int ScoreCount { get { return _score; } }
+
     private void Start()
     {
         ChangeScore?.Invoke(_score);

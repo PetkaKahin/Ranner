@@ -8,7 +8,7 @@ public class LetMover : MonoBehaviour
     private static float s_maxSpeed = 30;
     private static float s_minSpeed = 5;
 
-    public float Speed { get { return s_speed; } }
+    public static float Speed { get { return s_speed; } }
 
     private void Update()
     {
@@ -22,8 +22,8 @@ public class LetMover : MonoBehaviour
     }
     
     public void ChangeStartSpeed(float speed)
-    {
-        if (speed + s_speed >= s_minSpeed && speed + s_speed <= s_maxSpeed)
+    { 
+        if (speed >= s_minSpeed && speed <= s_maxSpeed)
             s_speed = speed;
     }
 

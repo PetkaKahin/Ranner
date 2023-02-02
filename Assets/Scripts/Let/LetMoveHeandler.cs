@@ -16,7 +16,7 @@ public class LetMoveHeandler : MonoBehaviour
 
     private float _timer = 0;
 
-    private void Start()
+    private void Awake()
     {
         _letMover.ChangeStartSpeed(_startSpeed);
         _letMover.ChangeMaxSpeed(_maxSpeed);

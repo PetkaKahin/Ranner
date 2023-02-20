@@ -1,8 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.Windows.Speech;
 
 public class EndGame : MonoBehaviour
 {

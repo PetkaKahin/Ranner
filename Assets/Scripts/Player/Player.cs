@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        Score.AddScore(-Score.ScoreCount);
         Died?.Invoke();
     }
 }

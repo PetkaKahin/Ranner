@@ -4,7 +4,6 @@ public class Let : MonoBehaviour
 {
     [SerializeField] private int _damage = 1;
     [SerializeField] private int _bonus;
-    [SerializeField] private Score _score;
 
     public int Damage 
     {
@@ -16,7 +15,7 @@ public class Let : MonoBehaviour
         if (collision.TryGetComponent(out Player player))
         {
             player.ApplayDamage(_damage);
-            _score.AddScore(_bonus);
+            Score.AddScore(_bonus);
         }
 
         Die();

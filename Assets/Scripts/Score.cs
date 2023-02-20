@@ -25,16 +25,16 @@ public class Score : MonoBehaviour
         if (_timer >= _timeBetwwenAddScore)
         {
             _timer = 0;
-            _score++;
-            ChangeScore?.Invoke(_score);
+            AddScore(1);
         }
     }
 
-    public void AddScore(int amount)
+    public static void AddScore(int amount)
     {
         if (amount > 0)
         {
             _score += amount;
+            Save.SaveScore(_score);
             ChangeScore?.Invoke(_score);
         } 
     }

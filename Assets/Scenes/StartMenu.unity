@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 1495186431}
   - component: {fileID: 1495186434}
   - component: {fileID: 1495186433}
-  - component: {fileID: 1495186432}
+  - component: {fileID: 1495186435}
   m_Layer: 5
   m_Name: Text Score
   m_TagString: Untagged
@@ -463,19 +463,6 @@ RectTransform:
   m_AnchoredPosition: {x: 287, y: -600}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1495186432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495186430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d612c43e36b764089e35d680ae493e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _text: {fileID: 1495186433}
 --- !u!114 &1495186433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +560,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495186430}
   m_CullTransparentMesh: 1
+--- !u!114 &1495186435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495186430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11dc5f9b12da8f4ca116d77f01ea69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bestScore: {fileID: 1495186433}
 --- !u!1 &1568363242
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +689,6 @@ GameObject:
   - component: {fileID: 1628058037}
   - component: {fileID: 1628058040}
   - component: {fileID: 1628058039}
-  - component: {fileID: 1628058038}
   m_Layer: 5
   m_Name: Text Best result
   m_TagString: Untagged
@@ -717,19 +716,6 @@ RectTransform:
   m_AnchoredPosition: {x: 74, y: -552}
   m_SizeDelta: {x: 978.28, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1628058038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628058036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d612c43e36b764089e35d680ae493e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _text: {fileID: 1628058039}
 --- !u!114 &1628058039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,8 +999,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.0299988, y: 571.68994}
-  m_SizeDelta: {x: -1.7800293, y: -1143.78}
+  m_AnchoredPosition: {x: -1.0300293, y: 483.09}
+  m_SizeDelta: {x: -1.78, y: -966.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959221930
 MonoBehaviour:

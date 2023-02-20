@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7363940214567202686}
   - component: {fileID: 1072968445089330277}
   m_Layer: 0
-  m_Name: Let Slower
+  m_Name: Let Booster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: faa94c4983753344eba132e4fb114d21, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 365886e04b1e9cc4894e108f851017da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 0
-  _bonus: 1
+  _bonus: 5
   _score: {fileID: 1336144776, guid: 4b3dfc4633b55b045832e580d844f13f, type: 3}
 --- !u!114 &7363940214567202687
 MonoBehaviour:
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.91803277, y: 0.91803277}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -154,5 +154,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _letMoveHeandler: {fileID: 5432047906391022053, guid: 4b3dfc4633b55b045832e580d844f13f, type: 3}
-  frameName: Slower Frame
-  _addSpeed: -1
+  frameName: Bosster Frame
+  _addSpeed: 1
